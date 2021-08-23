@@ -1,0 +1,54 @@
+--Live List example written in Bee Programming Language
+
+#type LiveList
+/*
+    
+    #function init take callback
+    /*
+         --Live List initialization
+        @set @call this.callback be callback
+        @set @call this.array be (@call createArray)
+    */
+
+    #function addItem take item
+    /*
+        --Live List Add item
+        @call collectionAdd with @call this.array, item
+        @call (@call this.callback) with (@call collectionSize with @call this.array)
+    */
+
+    #function removeItem take item
+    /*
+        --Live List Remove item
+        @call collectionRemove with @call this.array, item
+        @call (@call this.callback) with (@call collectionSize with @call this.array)
+    */
+
+    #function size
+    /*
+        #return with (@call collectionSize with @call this.array)
+    */
+*/
+
+#function liveListCallback take size
+/*
+    @call println with "Listener, Current size is : " + size
+*/
+
+#let liveList be @call LiveList with liveListCallback
+@call liveList->addItem with 1
+@call println with "LiveList     " + (@call liveList.array)
+
+@call liveList->addItem with 2
+@call println with "LiveList     " + (@call liveList.array)
+
+@call liveList->removeItem with 2
+@call println with "LiveList     " + (@call liveList.array)
+
+@call liveList->addItem with 4
+@call println with "LiveList     " + (@call liveList.array)
+
+@call liveList->removeItem with 1
+@call println with "LiveList     " + (@call liveList.array)
+
+@call println with "Current size " + (@call liveList->size)
