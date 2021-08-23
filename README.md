@@ -2,6 +2,17 @@
 
 Bee is interpreted programming language for LangJam 2021 (Created in less than 48h) based on first-class comments theme, the design of the syntax inspired from the comment style from many languages
 
+<p align="center">
+  Live List example in Bee
+  <img src="media/screenshots/LiveList.PNG" width="100%">
+    
+  Object Oriented Programming example in Bee
+  <img src="media/screenshots/Types.PNG" width="100%">
+    
+  Fibonacci example in Bee
+  <img src="media/screenshots/Fib.PNG" width="100%">
+</p>
+
 ## How to use it
 
 In the bin directory you will find bee-lang.jar and example directory, the language require JAVA 8
