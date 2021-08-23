@@ -7,5 +7,12 @@
     #return with ((@call fibonacci with n - 1) + (@call fibonacci with n - 2))
 */
 
-#let result be (@call fibonacci with 6)
-@call print with "Fibonacci of 6 is " + result
+
+#loop true
+/*
+    @call println with "Enter Number : "
+    #let num be @call scanNumber
+    #let result be (@call fibonacci with num)
+    @call println with "Fibonacci of " + num + " is " + result
+    @call println with ""
+*/
